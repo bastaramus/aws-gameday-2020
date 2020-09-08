@@ -4,6 +4,10 @@ module "vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
+  enable_nat_gateway = true
+  single_nat_gateway = true
+  one_nat_gateway_per_az = false
+
   name = "unicor_vpc"
   cidr = var.vpc_cidr
 
@@ -16,7 +20,6 @@ module "vpc" {
   public_subnet_suffix  = "public"
   intra_subnet_suffix   = "intra"
   private_subnet_suffix = "private"
-
 
   create_database_subnet_group = true
 
