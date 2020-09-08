@@ -6,3 +6,7 @@ vpc_public_subnets  = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
 vpc_private_subnets = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
 vpc_intra_subnets   = ["10.0.41.0/24", "10.0.42.0/24", "10.0.43.0/24"]
 vpc_db_subnets      = ["10.0.31.0/24", "10.0.32.0/24", "10.0.33.0/24"]
+
+db_name             = "unicor"
+db_username         = "dbuser"
+db_password         = "HvSGTNyWf3ec2p"

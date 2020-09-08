@@ -18,3 +18,7 @@ variable "vpc_private_subnets" {
 variable "vpc_db_subnets" {
   type = list
 }
+
+variable "db_name" {}
+variable "db_username" {}
+variable "db_password" {}
