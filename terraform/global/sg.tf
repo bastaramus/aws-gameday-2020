@@ -80,3 +80,21 @@ resource "aws_security_group" "DB_rds_sg" {
     security_groups = ["${aws_security_group.webserver_ec2.id}"]
   }
 }
+
+###
+# EFS security group
+###
+
+resource "aws_security_group" "efs_sg" {
+  name        = "efs_sg"
+  description = "Used for EFS storage"
+  vpc_id      = module.vpc.vpc_id
+
+  #NFS
+  ingress {
+    from_port       = 2049
+    to_port         = 2049
+    protocol        = "tcp"
+    security_groups = ["${aws_security_group.webserver_ec2.id}"]
+  }
+}

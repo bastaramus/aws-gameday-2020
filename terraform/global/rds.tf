@@ -6,7 +6,7 @@ module "db" {
 
   engine            = "mysql"
   engine_version    = "5.7.30"
-  instance_class    = "db.t2.micro"
+  instance_class    = "db.t2.medium"
   allocated_storage = 20
   storage_encrypted = false
 
