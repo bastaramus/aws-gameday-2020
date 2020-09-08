@@ -45,3 +45,8 @@ variable "asg_min" {}
 variable "asg_grace" {}
 variable "asg_hct" {}
 variable "asg_cap" {}
+
+data "aws_acm_certificate" "issued" {
+  domain   = "hail.buymyunicorns.com"
+  statuses = ["ISSUED"]
+}
