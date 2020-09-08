@@ -15,6 +15,6 @@ lc_instance_type    = "t2.medium"
 
 asg_max             = "6"
 asg_min             = "2"
-asg_grace           = "300"
-asg_hct             = "EC2"
+asg_grace           = "120"
+asg_hct             = "ELB"
 asg_cap             = "2"
