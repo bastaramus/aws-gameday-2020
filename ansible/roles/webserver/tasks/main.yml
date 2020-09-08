@@ -1,0 +1,6 @@
+---
+    - name: Set wordpress config
+      become: true
+      template:
+        src: templates/wp-config.php.j2
+        dest: /var/www/html/wp-config.php
