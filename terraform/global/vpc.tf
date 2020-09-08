@@ -6,7 +6,9 @@ module "vpc" {
 
   enable_nat_gateway = true
   single_nat_gateway = true
-  one_nat_gateway_per_az = false
+  one_nat_gateway_per_az = true
+
+  enable_s3_endpoint = true
 
   name = "unicor_vpc"
   cidr = var.vpc_cidr
