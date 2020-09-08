@@ -9,10 +9,20 @@ module "vpc" {
 
   azs              = var.vpc_available_zones
   private_subnets  = var.vpc_private_subnets
+  intra_subnets    = var.vpc_intra_subnets
   public_subnets   = var.vpc_public_subnets
   database_subnets = var.vpc_db_subnets
 
+  public_subnet_suffix  = "public"
+  intra_subnet_suffix   = "intra"
+  private_subnet_suffix = "private"
+
+
   create_database_subnet_group = true
+
+  intra_subnet_tags = {
+    Name = "intra_subnet"
+  }
 
   public_subnet_tags = {
     Name = "public_subnet"
@@ -35,7 +45,7 @@ module "vpc" {
   }
 
   tags = {
-    Terraform   = "true"
-    Project     = "Unicor"
+    Terraform = "true"
+    Project   = "Unicor"
   }
 }

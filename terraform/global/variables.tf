@@ -7,6 +7,11 @@ variable "vpc_available_zones" {
 variable "vpc_public_subnets" {
   type = list
 }
+
+variable "vpc_intra_subnets" {
+  type = list
+}
+
 variable "vpc_private_subnets" {
   type = list
 }
