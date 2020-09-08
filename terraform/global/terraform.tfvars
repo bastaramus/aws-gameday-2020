@@ -10,3 +10,11 @@ vpc_db_subnets      = ["10.0.31.0/24", "10.0.32.0/24", "10.0.33.0/24"]
 db_name             = "unicor"
 db_username         = "dbuser"
 db_password         = "HvSGTNyWf3ec2p"
+
+lc_instance_type    = "t2.medium"
+
+asg_max             = "6"
+asg_min             = "2"
+asg_grace           = "300"
+asg_hct             = "EC2"
+asg_cap             = "2"
